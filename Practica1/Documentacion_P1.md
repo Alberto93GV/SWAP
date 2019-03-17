@@ -63,12 +63,12 @@ Esta herramienta si fue instalada desde la terminal con el comando: _apt-get ins
 
 ## Acceso SSH (m1 a m2)
 
-![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica1/curl_m1.png)
-
-![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica1/curl_m2.png)
-
-## Acceso CURL (m1 a m2)
-
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica1/ssh_m1.png)
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica1/ssh_m2.png)
+
+## Acceso CURL (m1 a m2)
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica1/curl_m1.png)
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica1/curl_m2.png)
