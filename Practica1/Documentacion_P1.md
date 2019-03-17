@@ -61,6 +61,8 @@ Se usa para la **transferencia de archivos** con **sintaxis URL** y soporta dive
 
 Esta herramienta si fue instalada desde la terminal con el comando: _apt-get install curl_
 
+Para probar su funcionamiento creamos en ambas maquinas el archivo "hola.html" en el directorio: _/var/www/html_
+
 ## Acceso SSH (m1 a m2)
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica1/ssh_m1.png)
