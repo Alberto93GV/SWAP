@@ -61,6 +61,6 @@ Se usa para la **transferencia de archivos** con **sintaxis URL** y soporta dive
 
 Esta herramienta si fue instalada desde la terminal con el comando: _apt-get install curl_
 
-## Acceso SSH de m1 a m2
+## Acceso SSH (m1 a m2)
 
-## Acceso CURL de m2 a m1
+## Acceso CURL (m2 a m1)
