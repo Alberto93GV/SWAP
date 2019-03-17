@@ -28,11 +28,11 @@ Las **IP definidas** para cada máquina son:
 La **configuración** de la interfaz de red **enp0s8** se añade en:
 _/etc/network/interfaces_
 
-	**auto enp0s8**
+	auto enp0s8
 
-	**iface enp0s8 inet static**
+	iface enp0s8 inet static
 
-	**address 192.168.56.xxx**
+	address 192.168.56.xxx
 
 
 **[NOTA]**
@@ -42,7 +42,7 @@ Previamente haciendo **CTRL+W** en virtualbox podríamos **crear la red** (enp0s
 ## Servidor web (LAMP)
 Se trata de una pila de servicios/programas para la instalación de un servidor web.
  
-_LAMP = Linux Apache MySQL PHP_
+	LAMP = Linux Apache MySQL PHP
 
 En mi caso lo añadí durante la instalación del servidor. En caso contrario habría que instalar manualmente cada uno de ellos.
 
