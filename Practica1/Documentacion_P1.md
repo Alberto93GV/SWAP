@@ -50,6 +50,6 @@ En mi caso lo añadí durante la instalación del servidor. En caso contrario ha
 También fue añadido durante la instalación del servidor. Se trata de un servicio/protocolo seguro de acceso remoto a servidores.
 
 ## CURL
-Se usa para la **transferencia de archivos** con **sintaxis URL** y soporta diversos protocolos. En general se utiliza para **automatizar transferencias** de archivos o **simular** la **navegación web** de un **usuario** en un servidor.
+Se usa para la **transferencia de archivos** con **sintaxis URL** y soporta diversos protocolos. En general se utiliza para **automatizar transferencias** de archivos o **simular la navegación web** de un usuario en un servidor.
 
 Esta herramienta si fue instalada desde la terminal con el comando: _apt-get install curl_
