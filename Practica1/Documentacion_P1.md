@@ -50,7 +50,17 @@ En mi caso lo añadí durante la instalación del servidor. En caso contrario ha
 ## SSH
 También fue añadido durante la instalación del servidor. Se trata de un servicio/protocolo seguro de acceso remoto a servidores.
 
+Por motivos de seguridad denegamos el acceso root editando con 'vi' el archivo: _/etc/ssh/sshd_config_
+
+Habria que generar en ambas maquinas las llaves privadas y publicas (ssh-keygen) y copiar la publica en la del cliente (ssh-copy-id) para poder acceder de m1 a m2 y viceversa.
+
+El puerto por defecto para ssh (22) no ha sido modificado.
+
 ## CURL
 Se usa para la **transferencia de archivos** con **sintaxis URL** y soporta diversos protocolos. En general se utiliza para **automatizar transferencias** de archivos o **simular la navegación web** de un usuario en un servidor.
 
 Esta herramienta si fue instalada desde la terminal con el comando: _apt-get install curl_
+
+## Acceso SSH de m1 a m2
+
+## Acceso CURL de m2 a m1
