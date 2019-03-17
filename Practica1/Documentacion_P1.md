@@ -48,11 +48,11 @@ Se trata de una pila de servicios/programas para la instalación de un servidor 
 En mi caso lo añadí durante la instalación del servidor. En caso contrario habría que instalar manualmente cada uno de ellos.
 
 ## SSH
-También fue añadido durante la instalación del servidor. Se trata de un servicio/protocolo seguro de acceso remoto a servidores.
+También fue añadido durante la instalación del servidor. Se trata de un servicio/protocolo seguro de **acceso remoto a servidores**.
 
-Por motivos de seguridad denegamos el acceso root cambiando el valor del parametro 'PermitRootLogin' del archivo: _/etc/ssh/sshd_config_
+Por motivos de seguridad **denegamos el acceso root** cambiando el valor del parametro 'PermitRootLogin' del archivo: _/etc/ssh/sshd_config_
 
-Habria que generar en ambas maquinas las llaves privadas y publicas (ssh-keygen) y copiar la publica en la del cliente (ssh-copy-id) para poder acceder de m1 a m2 y viceversa.
+Habria que en ambas maquinas **generar las llaves privada y publica** (ssh-keygen) y **copiar la publica en el cliente** (ssh-copy-id) para poder acceder de m1 a m2 y viceversa.
 
 El puerto por defecto para ssh (22) no ha sido modificado.
 
@@ -63,4 +63,12 @@ Esta herramienta si fue instalada desde la terminal con el comando: _apt-get ins
 
 ## Acceso SSH (m1 a m2)
 
-## Acceso CURL (m2 a m1)
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica1/curl_m1.png)
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica1/curl_m2.png)
+
+## Acceso CURL (m1 a m2)
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica1/ssh_m1.png)
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica1/ssh_m2.png)
