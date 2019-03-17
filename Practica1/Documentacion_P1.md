@@ -50,7 +50,7 @@ En mi caso lo añadí durante la instalación del servidor. En caso contrario ha
 ## SSH
 También fue añadido durante la instalación del servidor. Se trata de un servicio/protocolo seguro de acceso remoto a servidores.
 
-Por motivos de seguridad denegamos el acceso root editando con 'vi' el archivo: _/etc/ssh/sshd_config_
+Por motivos de seguridad denegamos el acceso root cambiando el valor del parametro 'PermitRootLogin' del archivo: _/etc/ssh/sshd_config_
 
 Habria que generar en ambas maquinas las llaves privadas y publicas (ssh-keygen) y copiar la publica en la del cliente (ssh-copy-id) para poder acceder de m1 a m2 y viceversa.
 
