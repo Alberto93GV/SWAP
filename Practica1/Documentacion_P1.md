@@ -20,7 +20,6 @@ Interfaz de red definida:
 
 - **enp0s8**: adaptador solo-anfitrión o red interna que incluye tanto al anfitrión como a la propia maquina
 
-
 Las **IP definidas** para cada máquina son:
 
 - **m1**:  192.168.56.105
