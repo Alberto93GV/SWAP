@@ -18,7 +18,7 @@ El clonado se podria realizar con un directorio ya existente lo cual suele ser l
 ## Clonación de archivos entre máquinas con RSYNC
 Para algo puntual el procedimiento anterior puede ser muy útil. Sin embargo para la **sincronización de grandes cantidades de información** lo ideal es usar **rsync**. Se puede instalar con: **apt-get install rsync**. En mis máquinas no hizo falta por que ya lo estaba.
 
-A la hora de trabajar podemos hacerlo como usuario root o con el usuario habitual. Como con este ultimo podremos realizar todas las configuraciones asi que por comodidad vamos a hacer al usuario habitual dueño del directorio que queremos clonar con: **sudo chown alberto:alberto -R /var/www**
+A la hora de trabajar podemos hacerlo como usuario root o con el usuario habitual. Como con este ultimo podremos realizar todas las configuraciones asi que por comodidad vamos a **hacer al usuario habitual dueño del directorio** que queremos clonar con: **sudo chown alberto:alberto -R /var/www**
 
 Lo que yo hice fue **clonar en el directorio web de m1** el de **m2**. Para comprobar el correcto funcionamiento previamente cree en el directorio web de m2 un archivo llamado "**archivo_m2**". Ademas en las capturas podemos ver como al abrir el "hola.html" que creamos en la P1 este corresponde efectivamente al de m2.
 
