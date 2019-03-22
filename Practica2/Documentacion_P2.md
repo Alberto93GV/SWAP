@@ -26,7 +26,16 @@ Lo que yo hice fue **clonar en el directorio web de m1** el de **m2**. Para comp
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/rsync_m2.png)
 
-## Apartado n
+## Acceso SSH sin solicitud de contraseña
+Como comente en la P1 cree llaves privadas y publicas en ambas maquinas (ssh-keygen) y comparti las publicas (ssh-copy-id) entre m1 y m2 y viceversa para poder conectarme entre ellas via ssh. Sin embargo el uso de estas exigia la solicitud de una contraseña.
+
+Ahora la idea es que ambas maquinas compartan unas llaves publicas que no exigan contraseña. Podemos generarlas con ssh-keygen de la siguiente manera: **ssh-keygen -b 4096 -t rsa**. Posteriormente habria que compartirlas con **ssh-copy-id usuario@IP**.
+
+A continuacion en las **capturas** se muestra un ejemplo de la **generación de las clave en m1** y la **distribución de la pública a m2** y el **accesso de m2 a m1 sin contraseña**. El proceso de generación y distribución como he comentado ha de realizarse en ambas maquinas.
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/ssh_sin_contraseña_m1.png)
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/ssh_sin_contraseña_m2.png)
 
 
 
