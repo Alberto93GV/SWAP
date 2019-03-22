@@ -12,7 +12,7 @@ Despues creariamos por ejemplo una carpeta en una de las maquinas (podriamos rea
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/envio_ssh_m2.png)
 
 
-## Apartado 1
+## Clonado de archivos entre máquinas con rsync
 
 ...
 
