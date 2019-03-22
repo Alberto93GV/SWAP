@@ -1,11 +1,11 @@
 # PRACTICA 2
 
 ## Clonación de archivos entre máquinas por SSH
-En la P1 desactive el parametro **PermitRootLogin** por motivos de seguridad. Para hacer el copiado/envio de datos entre máquinas vamos a activarlo a '**yes**' con el editor **vi** en la configuración del ssh: **/etc/ssh/sshd_config**. 
+En la P1 desactive el parámetro **PermitRootLogin** por motivos de seguridad. Para hacer el copiado/envió de datos entre máquinas vamos a activarlo a '**yes**' con el editor **vi** en la configuración del ssh: **/etc/ssh/sshd_config**. 
 
-Una vez llevada acabo la modificacion lanzaremos **:wq** para escribir/guardar los cambios y cerrar el editor. Posteriormente reiniciamos el servicio con: **systemctl restart ssh**.
+Una vez llevada acabo la modificación lanzaremos **:wq** para escribir/guardar los cambios y cerrar el editor. Posteriormente reiniciamos el servicio con: **systemctl restart ssh**.
 
-Despues creariamos por ejemplo una carpeta en una de las maquinas y la enviariamos comprimida en un archivo tar por ssh a la otra con: **tar czf ./carpeta | ssh 192.168.56.xxx 'cat > ~/tar.tgz'**
+Después crearíamos por ejemplo una carpeta en una de las maquinas y la enviariamos comprimida en un archivo tar por ssh a la otra con: **tar czf ./carpeta | ssh 192.168.56.xxx 'cat > ~/tar.tgz'**
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/envio_ssh_m1.png)
 
@@ -13,7 +13,7 @@ Despues creariamos por ejemplo una carpeta en una de las maquinas y la enviariam
 
 **[NOTA]**
 
-El clonado se podria realizar con un directorio ya existente lo cual suele ser lo mas habitual pero dado la simplicidad del ejemplo y como introducción decidi hacerlo sobre una carpeta nueva. Mas adelante vamos a hacer el clonado sobre el directorio web **/var/www/html** que es en lo que se basa esta práctica.
+El clonado se podría realizar con un directorio ya existente lo cual suele ser lo mas habitual pero dado la simplicidad del ejemplo y como introducción decidí hacerlo sobre una carpeta nueva. Mas adelante vamos a hacer el clonado sobre el directorio web **/var/www/html** que es en lo que se basa esta práctica.
 
 ## Clonación de archivos entre máquinas con RSYNC
 Para algo puntual el procedimiento anterior puede ser muy útil. Sin embargo para la **sincronización de grandes cantidades de información** lo ideal es usar **rsync**. Se puede instalar con: **apt-get install rsync**. En mis máquinas no hizo falta por que ya lo estaba.
@@ -27,15 +27,12 @@ Lo que yo hice fue **clonar en el directorio web de m1** el de **m2**. Para comp
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/rsync_m2.png)
 
 ## Acceso SSH sin solicitud de contraseña
-Como comente en la P1 cree llaves privadas y publicas en ambas maquinas (ssh-keygen) y comparti las publicas (ssh-copy-id) entre m1 y m2 y viceversa para poder conectarme entre ellas via ssh. Sin embargo el uso de estas exigia la solicitud de una contraseña.
+Como comente en la P1 cree llaves privadas y publicas en ambas maquinas (ssh-keygen) y compartí las publicas (ssh-copy-id) entre m1 y m2 y viceversa para poder conectarme entre ellas. Sin embargo el uso de estas exigía la solicitud de una contraseña.
 
-Ahora la idea es que ambas maquinas compartan unas llaves publicas que no exigan contraseña. Podemos generarlas con ssh-keygen de la siguiente manera: **ssh-keygen -b 4096 -t rsa**. Posteriormente habria que compartirlas con **ssh-copy-id usuario@IP**.
+Ahora la idea es que ambas maquinas compartan unas llaves publicas que no exijan contraseña. Podemos generarlas con ssh-keygen de la siguiente manera: **ssh-keygen -b 4096 -t rsa**. Posteriormente habría que compartirlas con **ssh-copy-id usuario@IP**.
 
-A continuacion en las **capturas** se muestra un ejemplo de la **generación de las clave en m1** y la **distribución de la pública a m2** y el **accesso de m2 a m1 sin contraseña**. El proceso de generación y distribución como he comentado ha de realizarse en ambas maquinas.
+A continuación en las **capturas** se muestra un ejemplo de la **generación de las clave en m1** y la **distribución de la pública a m2** y el **accesso de m2 a m1 sin contraseña**. El proceso de generación y distribución como he comentado ha de realizarse en ambas maquinas.
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/ssh_sin_contraseña_m1.png)
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/ssh_sin_contraseña_m2.png)
-
-
-
