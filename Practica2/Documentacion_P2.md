@@ -36,3 +36,5 @@ A continuación en las **capturas** se muestra un ejemplo de la **generación de
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/ssh_sin_contraseña_m1.png)
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/ssh_sin_contraseña_m2.png)
+
+## Programar con CRONTAB una tarea periodica
