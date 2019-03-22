@@ -12,6 +12,7 @@ Despues creariamos por ejemplo una carpeta en una de las maquinas y la enviariam
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/envio_ssh_m2.png)
 
 **[NOTA]**
+
 El clonado se podria realizar con un directorio ya existente lo cual suele ser lo mas habitual pero dado la simplicidad del ejemplo y como introducción decidi hacerlo sobre una carpeta nueva. Mas adelante vamos a hacer el clonado sobre el directorio web **/var/www/html** que es en lo que se basa esta práctica.
 
 ## Copia de archivos entre máquinas con RSYNC
