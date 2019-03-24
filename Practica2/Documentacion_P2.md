@@ -38,19 +38,23 @@ A continuación en las **capturas** se muestra un ejemplo de la **generación de
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/ssh_sin_contraseña_m2.png)
 
 ## Programar con CRONTAB una tarea periódica
-En la linea de esta práctica lo que vamos a hacer es programar en crontab que **cada 'x' tiempo** se haga una **copia del directorio web de m1 en m2**.
+En la linea de esta práctica lo que vamos a hacer es **programar en crontab de m2** que **cada 'x' tiempo** se haga una **copia del directorio web de m1**.
 
-Para **comprobar y ver visualmente** en las capturas el **correcto funcionamiento** crearemos en el directorio de m1 por ejemplo el archivo "**crontab_OK**".
+Para **comprobar y ver visualmente** en las capturas el **correcto funcionamiento** crearemos en el directorio de m1 el archivo "**crontab_OK**".
 
 La **lista de tareas programadas** se encuentran en el archivo: **/etc/crontab**
 
 [**NOTA**]
 Podemos abrir, editar y guardar con **vi** el archivo anterior como se menciono en el primer apartado de esta practica. 
 
-Con la siguiente orden se hara una copia a los 30min de cada hora: 
+Con la siguiente orden se hara una copia a los 8min de cada hora: 
 	
-	30 *	* * *	root	rsync -avz -e ssh alberto@192.168.56.110:/var/www /var/www
+	8 *	* * *	alberto		rsync -avz -e ssh alberto@192.168.56.110:/var/www/ /var/www/
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/crontab_m2.png)
 
 Una vez hecho esto deberiamos reiniciar el servicio con **systemctl restart cron** y esperar a que se realice la copia.
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/dir_web_tras_cron_m2.png)
 
 
