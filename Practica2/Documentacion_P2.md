@@ -47,9 +47,9 @@ La **lista de tareas programadas** se encuentran en el archivo: **/etc/crontab**
 [**NOTA**]
 Podemos abrir, editar y guardar con **vi** el archivo anterior como se menciono en el primer apartado de esta practica. 
 
-Con la siguiente orden se hara una copia a los 45min de cada hora: 
+Con la siguiente orden se hara una copia a los 30min de cada hora: 
 	
-	45 *	* * *	root	rsync -avz -e ssh alberto@192.168.56.110:/var/www /var/www
+	30 *	* * *	root	rsync -avz -e ssh alberto@192.168.56.110:/var/www /var/www
 
 Una vez hecho esto deberiamos reiniciar el servicio con **systemctl restart cron** y esperar a que se realice la copia.
 
