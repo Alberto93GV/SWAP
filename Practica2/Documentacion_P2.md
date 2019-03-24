@@ -13,12 +13,12 @@ Después crearíamos por ejemplo una carpeta en una de las maquinas y la enviari
 
 **[NOTA]**
 
-El clonado se podría realizar con un directorio ya existente lo cual suele ser lo mas habitual pero dado la simplicidad del ejemplo y como introducción decidí hacerlo sobre una carpeta nueva. Mas adelante vamos a hacer el clonado sobre el directorio web **/var/www/html** que es en lo que se basa esta práctica.
+El clonado se podría realizar con un directorio ya existente lo cual suele ser lo mas habitual pero dado la simplicidad del ejemplo y como introducción decidí hacerlo sobre una carpeta nueva. Mas adelante vamos a hacer el clonado sobre el directorio web **/var/www/** que es en lo que se basa esta práctica.
 
 ## Clonación de archivos entre máquinas con RSYNC
 Para algo puntual el procedimiento anterior puede ser muy útil. Sin embargo para la **sincronización de grandes cantidades de información** lo ideal es usar **rsync**. Se puede instalar con: **apt-get install rsync**. En mis máquinas no hizo falta por que ya lo estaba.
 
-A la hora de trabajar podemos hacerlo como usuario root o con el usuario habitual. Como con este ultimo podremos realizar todas las configuraciones asi que por comodidad vamos a **hacer al usuario habitual dueño del directorio** que queremos clonar con: **sudo chown alberto:alberto -R /var/www**
+A la hora de trabajar podemos hacerlo como usuario root o con el usuario habitual. Como con este ultimo podremos realizar todas las configuraciones por comodidad vamos a **hacer al usuario habitual dueño del directorio** que queremos clonar con: **sudo chown alberto:alberto -R /var/www**
 
 Lo que yo hice fue **clonar en el directorio web de m1** el de **m2**. Para comprobar el correcto funcionamiento previamente cree en el directorio web de m2 un archivo llamado "**archivo_m2**". Ademas en las capturas podemos ver como al abrir el "hola.html" que creamos en la P1 este corresponde efectivamente al de m2.
 
@@ -27,11 +27,11 @@ Lo que yo hice fue **clonar en el directorio web de m1** el de **m2**. Para comp
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/rsync_m2.png)
 
 ## Acceso SSH sin solicitud de contraseña
-Como comente en la P1 cree llaves privadas y publicas en ambas maquinas (ssh-keygen) y compartí las publicas (ssh-copy-id) entre m1 y m2 y viceversa para poder conectarme entre ellas. Sin embargo el uso de estas exigía la solicitud de una contraseña.
+Como comente en la P1 cree llaves privadas y publicas en ambas maquinas (ssh-keygen) y compartí la pública (ssh-copy-id) de m1 con m2 y viceversa para poder conectarme entre ellas. Sin embargo el uso de estas exigía la solicitud de una contraseña.
 
-Ahora la idea es que ambas maquinas compartan unas llaves publicas que no exijan contraseña. Podemos generarlas con ssh-keygen de la siguiente manera: **ssh-keygen -b 4096 -t rsa**. Posteriormente habría que compartirlas con **ssh-copy-id usuario@IP**.
+Ahora la idea es que ambas máquinas compartan unas llaves publicas que no exijan contraseña. Podemos generarlas con ssh-keygen de la siguiente manera: **ssh-keygen -b 4096 -t rsa**. Posteriormente habría que compartirlas con **ssh-copy-id usuario@IP**.
 
-A continuación en las **capturas** se muestra un ejemplo de la **generación de las clave en m1** y la **distribución de la pública a m2** y el **accesso de m2 a m1 sin contraseña**. El proceso de generación y distribución como he comentado ha de realizarse en ambas maquinas.
+A continuación en las **capturas** se muestra un ejemplo de la **generación de las clave en m1** y la **distribución de la pública a m2** y el **accesso de m2 a m1 sin contraseña**. El proceso de generación y distribución ha de realizarse con ambas máquinas.
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/ssh_sin_contraseña_m1.png)
 
