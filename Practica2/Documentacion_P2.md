@@ -38,7 +38,7 @@ A continuación en las **capturas** se muestra un ejemplo de la **generación de
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/ssh_sin_contraseña_m2.png)
 
 ## Programar con CRONTAB una tarea periódica
-En la linea de esta práctica lo que vamos a hacer es programar en crontab que **cada 'x' tiempo se haga una copia del directorio web de m1 en m2**.
+En la linea de esta práctica lo que vamos a hacer es programar en crontab que **cada 'x' tiempo** se haga una **copia del directorio web de m1 en m2**.
 
 Para **comprobar y ver visualmente** en las capturas el **correcto funcionamiento** crearemos en el directorio de m1 por ejemplo el archivo "**crontab_OK**".
 
