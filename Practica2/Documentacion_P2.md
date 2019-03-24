@@ -45,7 +45,6 @@ Para **comprobar y ver visualmente** en las capturas el **correcto funcionamient
 La **lista de tareas programadas** se encuentran en el archivo: **/etc/crontab**
 
 [**NOTA**]
-
 Podemos abrir, editar y guardar con **vi** el archivo anterior como se menciono en el primer apartado de esta practica. 
 
 Añadiendo la siguiente orden conseguiremos que la copia se haga a los 45min de cada hora: **45 *	* * *	root	rsync -avz -e ssh alberto@192.168.56.110:/var/www /var/www**.
