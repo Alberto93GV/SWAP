@@ -53,7 +53,7 @@ Con la siguiente orden se hara una copia a los 8min de cada hora:
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/crontab_m2.png)
 
-Una vez hecho esto deberiamos reiniciar el servicio con **systemctl restart cron** y esperar a que se realice la copia.
+Una vez hecho esto deberiamos reiniciar el servicio con **systemctl restart cron** y esperar a que se realice la copia. Como podemos ver "crontab_OK" aparece asi que la copia se realizo correctamente.
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica2/dir_web_tras_cron_m2.png)
 
