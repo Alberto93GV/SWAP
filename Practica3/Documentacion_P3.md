@@ -62,8 +62,33 @@ Para comprobar el correcto funcionamiento lanzamos varias ordenes '**curl**' a l
 
 Como podemos ver cada una de las peticiones la reenvia a un servidor diferente.
 
-## Apache BenchMark con NGINX
+## Apache BenchMark con NGINX y HAPROXY
+
+Lo primero es **instalar Apache** en la **maquina anfitriona**. Para ello accedemos como **root** y lanzamos las siguientes ordenes:
+
+	apt-get update
+	apt-get install -y apache2
+
+Una vez instalado comprobamos si el **servicio** esta **activo**. En caso contrario lanzamos la orden:
+
+	systemctl start apache2
+
+Ahora, con todas las maquinas levantadas (tanto servidores como balanceadores), procedemos a correr el benchmark de apache a ambos balanceadores.
+
+Procedemos primero con **NGINX** para **10000 peticiones** y un **nivel de concurrencia 10**:
+
+	ab -n 10000 -c 10 http://192.168.56.115/index.html
+
+La **salida del benchmark** es la siguiente:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/ab_nginx.png)
+
+Procedemos finalmente con **HAPROXY** igualmente para **10000 peticiones** y un **nivel de concurrencia 10**:
+
+	ab -n 10000 -c 10 http://192.168.56.120/index.html
 
 
+La **salida del benchmark** es la siguiente:
 
-## Apache BenchMark con HAPROXY
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/ab_haproxy.png)
+
