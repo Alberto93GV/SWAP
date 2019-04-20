@@ -14,12 +14,20 @@ Una vez instalado creamos el **archivo de configuración** con la orden 'touch' 
 
 Con el editor 'vi' definimos la **configuración** que se muestra en la siguiente captura para que el balanceador gestione las solicitudes a los servidores creados en las practicas anteriores:
 
-![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/nginx_conf.png)
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/nginx_conf_1.png)
+
+En el **archivo propio de configuracion de nginx** (que NO el anterior creado para el balanceador en si):
+
+	/etc/nginx/nginx.conf
+
+De nuevo con el editor 'vi' lo abrimos y comentamos la siguiente linea:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/nginx_conf_2.png)
 
 
 Finalmente **reiniciamos** el **servicio** con: 
 
-	systemctl start nginx
+	systemctl restart nginx
 
 
 
