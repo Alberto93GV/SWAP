@@ -13,6 +13,8 @@ Una vez instalado creamos el **archivo de configuración** con la orden 'touch' 
 
 Con el editor 'vi' definimos la **configuración** que se muestra en la siguiente captura:
 
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/nginx_conf.png)
+
 
 Finalmente **iniciamos** el **servicio** con: 
 
