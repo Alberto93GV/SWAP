@@ -92,3 +92,7 @@ La **salida del benchmark** es la siguiente:
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/ab_haproxy.png)
 
+
+[**CONCLUSIÓN**]
+En base a los resultados podemos concluir que **HAPROXY** tiene un **tiempo de respuesta menor** y por lo tanto mejor que **NGINX**.
+
