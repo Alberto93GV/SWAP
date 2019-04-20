@@ -20,7 +20,7 @@ En el **archivo propio de configuracion de nginx** (que NO el anterior creado pa
 
 	/etc/nginx/nginx.conf
 
-De nuevo con el editor 'vi' lo abrimos y comentamos la siguiente linea:
+Lo abrimos con el editor 'vi' y comentamos la linea:
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/nginx_conf_2.png)
 
