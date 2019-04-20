@@ -29,10 +29,11 @@ Finalmente **reiniciamos** el **servicio** con:
 
 	systemctl restart nginx
 
+Para comprobar el correcto funcionamiento lanzamos varias ordenes '**curl**' a la **IP** del **balanceador** (192.168.56.115) desde la maquina anfitriona:
 
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/prueba_nginx.png)
 
-
-
+Como podemos ver cada una de las peticiones la reenvia a un servidor diferente.
 
 ## HAPROXY como balaceador de carga
 
