@@ -6,17 +6,18 @@ Lo primero es **crear un nuevo servidor ubuntu** (sin instalarle el paquete LAMP
 
 	apt-get update && apt-get dist-upgrade && apt-get autoremove
 	apt-get install nginx
+	systemctl start nginx
 
 Una vez instalado creamos el **archivo de configuración** con la orden 'touch' en la siguiente ruta:
 	
 	etc/nginx/conf.d/default.conf
 
-Con el editor 'vi' definimos la **configuración** que se muestra en la siguiente captura:
+Con el editor 'vi' definimos la **configuración** que se muestra en la siguiente captura para que el balanceador gestione las solicitudes a los servidores creados en las practicas anteriores:
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/nginx_conf.png)
 
 
-Finalmente **iniciamos** el **servicio** con: 
+Finalmente **reiniciamos** el **servicio** con: 
 
 	systemctl start nginx
 
