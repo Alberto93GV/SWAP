@@ -8,14 +8,14 @@ Lo primero es **crear un nuevo servidor ubuntu** (sin instalarle el paquete LAMP
 	apt-get install nginx
 	systemctl start nginx
 
-Una vez instalado podremos acceder a su **archivo de configuracion** y editarlo con 'vi' en la siguiente ruta:
+Una vez instalado creamos el **archivo de configuración** con la orden 'touch' en la siguiente ruta:
 	
 	etc/nginx/conf.d/default.conf
 
-La configuracion quedaria como se muestra en la siguiente captura:
+Con el editor 'vi' definimos la **configuración** que se muestra en la siguiente captura:
 
 
-Ahora **iniciamos** el **servicio** con: 
+Finalmente **iniciamos** el **servicio** con: 
 
 	systemctl start nginx
 
