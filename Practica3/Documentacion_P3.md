@@ -2,7 +2,7 @@
 
 ## NGINX como balanceador de carga
 
-Lo primero es **crear un nuevo servidor ubuntu** (sin instalarle el paquete LAMP). Accediendo a este como **root** lanzaremos las siguientes ordenes para **instalar NGINX** como balanceador:
+Lo primero es **crear un nuevo servidor ubuntu** (sin instalarle el paquete LAMP). Accediendo a este como **root** lanzaremos las siguientes ordenes para **instalar NGINX**:
 
 	apt-get update && apt-get dist-upgrade && apt-get autoremove
 	apt-get install nginx
