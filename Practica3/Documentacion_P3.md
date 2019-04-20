@@ -37,7 +37,30 @@ Como podemos ver cada una de las peticiones la reenvia a un servidor diferente.
 
 ## HAPROXY como balaceador de carga
 
+Lo primero es **crear un nuevo servidor ubuntu** (sin instalarle el paquete LAMP). Accediendo a este como **root** lanzaremos las siguientes ordenes para **instalar HAProxy**:
 
+	apt-get update && apt-get dist-upgrade && apt-get autoremove
+	apt-get install haproxy
+
+Con el editor 'vi' definimos la **configuración** que se muestra en la siguiente captura para que el balanceador gestione las solicitudes a los servidores creados en las practicas anteriores:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/haproxy_conf.png)
+
+**Lanzamos** el **servicio** con la siguiente orden:
+
+	sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
+
+Si no lanza ningun aviso o error es que todo ha ido correctamente.
+
+Finalmente **reiniciamos** el **servicio** con: 
+
+	systemctl restart haproxy
+
+Para comprobar el correcto funcionamiento lanzamos varias ordenes '**curl**' a la **IP** del **balanceador** (192.168.56.120) desde la maquina anfitriona:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica3/prueba_haproxy.png)
+
+Como podemos ver cada una de las peticiones la reenvia a un servidor diferente.
 
 ## Apache BenchMark con NGINX
 
