@@ -10,8 +10,15 @@ Introduciendo las siguientes ordenes como root podemos **generar** en 'Ubuntu Se
 
 Tras esto se nos solicitaran un conjunto de datos para la configuracion del dominio como se muestra en la siguiente captura:
 
-![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/img.png)
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/config_dominio.png)
 
+Procedemos pues a editar con 'vi' el archivo de configuracion por defecto de SSL en la siguiente ruta:
+
+	vi /etc/apache2/sites-available/default-ssl.conf
+
+Quedando esta como se muestra en la siguiente captura:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/config_ssl.png)
 
 
 ## Configuración de las reglas del cortafuegoss
