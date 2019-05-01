@@ -44,8 +44,21 @@ Ahora debemos **copiar** tantos las **claves** como la **configuracion SSL** de 
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/copia_config_ssl_a_m2.png)
 
+Para terminar con este primer apartado de la practica deberemos **configurar SSL en el balanceador 'nginx'** para que acepte el trafico por el puerto **443**. Deberemos al igual que con m2 hacer una **copia de las claves** con 'rsync' esta vez por ejemplo en el directorio /etc/ssl.
 
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/copia_claves_a_nginx.png)
 
+Despues editaremos el archivo de configuracion de 'nginx' con 'vi':
+
+	vi /etc/nginx/conf.d/default.conf
+
+Quedando este como se muestra en la siguiente captura:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/config_nginx.png)
+
+Finalmente lanzamos 'curl' desde el anfitrion para ver que el balanceador acepta por el puerto 443 y redirige correctamente a ambas maquinas como se muestra en la siguiente captura:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/prueba_final.png)
 
 
 
