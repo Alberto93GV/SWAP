@@ -16,7 +16,7 @@ Procedemos pues a editar con 'vi' el archivo de configuracion por defecto de SSL
 
 	vi /etc/apache2/sites-available/default-ssl.conf
 
-Quedando esta como se muestra en la siguiente captura:
+Debemos modificar las rutas de los certificados como se muestra en la siguiente captura:
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/config_ssl.png)
 
