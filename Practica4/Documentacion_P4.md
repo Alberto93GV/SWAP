@@ -1,12 +1,10 @@
 # PRACTICA 4
 
-## seccion
+## Instalación certificado SSL autofirmado
 
 
-## seccion
+## Configuración de las reglas del cortafuegoss
 
-
-## seccion
 
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/img.png)
