@@ -35,6 +35,15 @@ Tras esto tanto desde el **navegador** como desde la **terminal** con 'curl' pro
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/prueba_https_m1.png)
 
+Ahora debemos **copiar** tantos las **claves** como la **configuracion SSL** de m1 **en m2** usando **rsync** con los siguiente comandos desde m2:
+
+	rsync -avz -e ssh 192.168.56.105:/etc/apache2/ssl/* /etc/apache2/ssl/
+	rsync -avz -e ssh 192.168.56.105:/etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/copia_claves_a_m2.png)
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/copia_config_ssl_a_m2.png)
+
 
 
 
