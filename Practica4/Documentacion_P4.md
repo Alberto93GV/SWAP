@@ -33,7 +33,7 @@ Ahora **activamos** el sitio **default-ssl** y hacemos un **reload** a 'Apache':
 	a2ensite default-ssl
 	service apache2 reload
 
-Tras esto tanto desde el **navegador** o desde la **terminal** con 'curl' probamos a conectarnos mediante **https** y comprobamos que funciona correctamente como se muestra en la siguiente captura:
+Tras esto tanto desde el **navegador** como desde la **terminal** con 'curl' probamos a conectarnos mediante **https** y comprobamos que funciona correctamente como se muestra en la siguiente captura:
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/prueba_https_m1.png)
 
@@ -58,7 +58,7 @@ Quedando este como se muestra en la siguiente captura:
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/config_nginx.png)
 
-Finalmente lanzamos 'curl' desde el anfitrion para ver que el balanceador acepta por el puerto 443 y redirige correctamente a ambas maquinas:
+Finalmente lanzamos 'curl' desde el anfitrion para ver que el balanceador acepta peticiones por el puerto 443 y redirige correctamente a ambas máquinas:
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/prueba_final.png)
 
