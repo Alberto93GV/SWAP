@@ -85,11 +85,11 @@ Por ultimo lo único que quedaria seria hacer un reload al 'systemd' para que le
 	systemctl daemon-reload
 	systemctl enable iptables.service
 
-Para comprobar que todo ha ido correctamente reiniciamos el servidor y lanzamos la orden:
+Para comprobar que todo ha ido correctamente reiniciamos el servidor y lanzamos la orden tras solicitar varias peticiones 'curl' desde el terminal anfitrión a m1:
 
 	iptables -L -n -v
 
-Tras solicitar varias peticiones 'curl' desde el terminal anfitrion a la m1 podemos observar en la siguiente captura que el script se ha ejecutado correctamente y que ha registrado el tráfico de paquetes de entrada y salida:
+Como podemos observar en la siguiente captura el script se ha ejecutado y se ha registrado correctamente el tráfico de paquetes de entrada y salida:
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/iptables_service_3.png)
 
