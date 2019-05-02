@@ -63,8 +63,7 @@ Finalmente lanzamos 'curl' desde el anfitrion para ver que el balanceador acepta
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/prueba_final.png)
 
 
-
-## Configuración de las reglas del cortafuegoss
+## Configuración de las reglas del cortafuegos
 
 
 
