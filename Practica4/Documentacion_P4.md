@@ -85,7 +85,7 @@ Por ultimo lo único que quedaria seria hacer un reload al 'systemd' para que le
 	systemctl daemon-reload
 	systemctl enable iptables.service
 
-Para comprobar que todo ha ido correctamente reiniciamos el servidor y lanzamos la orden tras solicitar varias peticiones 'curl' desde el terminal anfitrión a m1:
+Para comprobar que todo ha ido correctamente reiniciamos el servidor y lanzamos la siguiente orden tras solicitar varias peticiones 'curl' desde el terminal anfitrión a m1:
 
 	iptables -L -n -v
 
