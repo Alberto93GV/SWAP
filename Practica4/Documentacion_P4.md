@@ -46,7 +46,10 @@ Ahora debemos **copiar** tantos las **claves** como la **configuracion SSL** de 
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/copia_config_ssl_a_m2.png)
 
-Para terminar con este primer apartado de la practica deberemos **configurar SSL en el balanceador 'nginx'** para que acepte el trafico por el puerto **443**. Deberemos al igual que con m2 hacer una **copia de las claves** con 'rsync' esta vez en el directorio /etc/ssl.
+[**NOTA**]
+Despues de hacer las copias con 'rsync' hay que activar como hicimos en m1 el sitio default-ssl y hacer el reload a 'Apache'.
+
+Para terminar con este primer apartado de la practica deberemos **configurar SSL en el balanceador 'nginx'** para que acepte el trafico por el puerto **443**. Deberemos, al igual que con m2, hacer una **copia de las claves** con 'rsync' esta vez en el directorio /etc/ssl.
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/copia_claves_a_nginx.png)
 
@@ -63,7 +66,33 @@ Finalmente lanzamos 'curl' desde el anfitrion para ver que el balanceador acepta
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/prueba_final.png)
 
 
-## Configuración de las reglas del cortafuegos
+## Configuración reglas cortafuegos con IPTABLES
+
+La idea es crear un script con la configuracion básica del cortafuegos para m1. Yo lo hice dentro del directorio /root y su configuración es la que se muestra en la captura:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/iptablescfg.png)
+
+A continuación creamos el servicio en la ruta y con los permisos que se muestran en la siguiente captura:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/iptables_service_1.png)
+
+La definición del servicio es:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/iptables_service_2.png)
+
+Por ultimo lo único que quedaria seria hacer un reload al 'systemd' para que lea el nuevo servicio y activarlo para que se ejecute durante el arranque del sistema:
+
+	systemctl daemon-reload
+	systemctl enable iptables.service
+
+Para comprobar que todo ha ido correctamente reiniciamos el servidor y lanzamos la orden:
+
+	iptables -L -n -v
+
+Tras solicitar varias peticiones 'curl' desde el terminal anfitrion a la m1 podemos observar en la siguiente captura que el script se ha ejecutado correctamente y que ha registrado el tráfico de paquetes de entrada y salida:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/iptables_service_3.png)
+
 
 
 
