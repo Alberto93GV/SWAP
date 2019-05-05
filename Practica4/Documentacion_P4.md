@@ -47,6 +47,7 @@ Ahora debemos **copiar** tantos las **claves** como la **configuracion SSL** de 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/copia_config_ssl_a_m2.png)
 
 [**NOTA**]
+
 Despues de hacer las copias con 'rsync' hay que activar como hicimos en m1 el sitio default-ssl y hacer el reload a 'Apache'.
 
 Para terminar con este primer apartado de la practica deberemos **configurar SSL en el balanceador 'nginx'** para que acepte el trafico por el puerto **443**. Deberemos, al igual que con m2, hacer una **copia de las claves** con 'rsync' esta vez en el directorio /etc/ssl.
@@ -93,11 +94,9 @@ Ademas de darle los permisos anteriormente mencionados hay que crear un enlace s
 
 Donde S99 hace referencia a la prioridad con la que se ejecutara al arrancar el sistema. 0 mucha prioridad, 99 poca prioridad.
 
-Para comprobar que todo ha ido correctamente reiniciamos el servidor y lanzamos la siguiente orden tras solicitar varias peticiones 'curl' desde el terminal anfitrión a m1:
+Reiniciamos el servidor y lanzamos la siguiente orden para comprobar que el script se ejecuta correctamente:
 
 	iptables -L -n -v
-
-Como podemos observar en la siguiente captura el script se ha ejecutado y se ha registrado correctamente el tráfico de paquetes de entrada y salida:
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica4/iptables_service_3.png)
 
