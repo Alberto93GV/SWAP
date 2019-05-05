@@ -85,6 +85,13 @@ Por ultimo lo único que quedaria seria hacer un reload al 'systemd' para que le
 	systemctl daemon-reload
 	systemctl enable iptables.service
 
+[**NOTA**]
+Ademas de darle los permisos anteriormente mencionados hay que crear un enlace simbolico a dicho script para que este pueda ejecutarse al inicio del sistema. Podemos crearlo con el siguiente comando:
+
+	sudo ln -s /root/iptablescfg.sh /etc/systemd/system/99iptablescfg.sh
+
+Donde S99 hace referencia a la prioridad con la que se ejecutara al arrancar el sistema. 0 mucha prioridad, 99 poca prioridad...
+
 Para comprobar que todo ha ido correctamente reiniciamos el servidor y lanzamos la siguiente orden tras solicitar varias peticiones 'curl' desde el terminal anfitrión a m1:
 
 	iptables -L -n -v
