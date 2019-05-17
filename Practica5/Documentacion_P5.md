@@ -59,11 +59,15 @@ Para restaurarla en m2, una vez creada la BD por lo anteriormente comentado, lan
 
 Mostramos la BD para comprobar que el volcado se haya realizado correctamente:
 
+	mysql> select * from datos;
 
-
-
-
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/volcado_copia_BD_en_m2.png)
 
 ## Configuración maestro-esclavo replicación auto. de datos entre maquinas
+Todo el proceso anterior seria llevado acabo por un administrador a mano. La idea es configurar por un lado al maestro (m1) y por otro lado al esclavo (m2) para automatizar este proceso lo cual seria lo ideal en un escenario de produccion real.
+
+
+
+
 
 
