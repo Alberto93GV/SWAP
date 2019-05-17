@@ -16,7 +16,7 @@ A continuación procedemos a introducir un registro de prueba:
 
 	mysql> insert into datos(nombre,tlf) values ("Alberto",958553876);
 
-![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/insertar_dato_y_consultarlo.png)
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/insertar_dato_y_consultarlos.png)
 
 
 ## Copia de seguridad de la BD usando mysqldump
