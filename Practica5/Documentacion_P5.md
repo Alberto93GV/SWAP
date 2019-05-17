@@ -15,6 +15,6 @@
 
 
 
-## Configuración maestro-esclavo para replicación automatica de datos entre maquinas
+## Configuración maestro-esclavo replicación automatica de datos entre maquinas
 
 
