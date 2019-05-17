@@ -24,7 +24,13 @@ En esa tabla hice la inserción de mas datos/registros para despues hacer la cop
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/tabla_final.png)
 
 ## Copia de seguridad de la BD usando mysqldump
+MySQL ofrece una herramienta para el clonado de las BD llamada 'mysqldump'. Con el siguiente comando obtenemos la lista de opciones disponibles para la misma:
 
+	mysqldump --help
+
+Antes de hacer la copia debemos cerrar el acceso a la BD para evitar asi que se cambie nada de la siguiente manera:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/evitar_acceso_a_la_BD.png)
 
 
 
