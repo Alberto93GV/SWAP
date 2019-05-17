@@ -61,10 +61,32 @@ Mostramos la BD para comprobar que el volcado se haya realizado correctamente:
 
 	mysql> select * from datos;
 
-![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/volcado_copia_BD_en_m2.png)
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/volcado_copia_en_BD_m2.png)
 
 ## Configuración maestro-esclavo replicación auto. de datos entre maquinas
 Todo el proceso anterior seria llevado acabo por un administrador a mano. La idea es configurar por un lado al maestro (m1) y por otro lado al esclavo (m2) para automatizar este proceso lo cual seria lo ideal en un escenario de produccion real.
+
+En m1 abrimos como root con 'vi' el archivo:
+
+	/etc/mysql/mysql.conf.d/mysqld.cnf
+
+Comentamos el siguiente paremetro que sirve para escuchar a un servidor:
+
+	#bind-address 127.0.0.1
+
+Indicamos el archivo donde almacenar el log de errores:
+
+	log_error = /var/log/mysql/error.log
+
+Establecemos el identificador del servidor:
+
+	server-id = 1
+
+Finalmente reiniciamos el servicio mysql:
+
+	/etc/init.d/mysql restart
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/reinicio_mysql.png)
 
 
 
