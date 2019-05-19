@@ -100,6 +100,22 @@ Como mi version de MySQL es superior a la 5.5 (en concreto la 5.7.23) no debemos
 	Master-user = root
 	Master-password = 1234
 
+Ahora accedemos a MySQL en el maestro, **creamos** un **usuario** y le **damos permisos de acceso** para la replicación:
+
+	mysql> CREATE USER esclavo IDENTIFIED BY 'esclavo';
+	mysql> GRANT REPLICATION SLAVE ON *.* TO 'esclavo'@'%' IDENTIFIED BY 'esclavo';
+	mysql> FLUSH PRIVILEGES;
+	mysql> FLUSH TABLES;
+	mysql> FLUSH TABLES WITH READ LOCK;
+
+Para finalizar con el maestro vamos a consultar los datos de la BD que posteriormente vamos a replicar en el esclavo:
+
+	mysql> SHOW MASTER STATUS;
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/show_master_status.png)
+
+
+
 
 
 
