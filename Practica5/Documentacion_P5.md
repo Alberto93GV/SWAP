@@ -108,18 +108,18 @@ Ahora accedemos a MySQL en el maestro, **creamos** un **usuario** y le **damos p
 	mysql> FLUSH TABLES;
 	mysql> FLUSH TABLES WITH READ LOCK;
 
-Para finalizar con el maestro vamos a consultar los datos de la BD que posteriormente vamos a replicar en el esclavo:
+Para finalizar con el maestro vamos a **consultar los datos de la BD** que posteriormente vamos a replicar en el esclavo:
 
 	mysql> SHOW MASTER STATUS;
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/show_master_status.png)
 
-Nos iriamos pues al esclavo, entrariamos en MySQL, le facilitariamos los datos del maestro y arrancariamos el esclavo:
+Nos iriamos pues al **esclavo**, entrariamos en MySQL, le **facilitariamos los datos** del maestro y **arrancariamos** el **esclavo**:
 
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/configuracion_final_esclavo.png)
 
-Volvemos al maestro para desbloquear las tablas para que puedan meterse nuevos datos con la siguiente orden:
+Volvemos al **maestro** para **desbloquear** las **tablas** para que puedan meterse nuevos datos con la siguiente orden:
 
 	mysql> UNLOCK TABLES;
 
@@ -128,7 +128,7 @@ Para comprobar que la replicacion funciona correctamente vamos a introducir el s
 	mysql> use contactos;
 	mysql> insert into datos(nombre,tlf) values ("Prueba",666555444);
 
-Desde m2 consultamos la tabla y vemos que efectivamente dicho registro ha sido replicado como se muestra en la siguiente captura:
+Desde **m2 consultamos la tabla** y vemos que **efectivamente** dicho registro **ha sido replicado** como se muestra en la siguiente captura:
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/comprobacion_replicacion.png)
 
