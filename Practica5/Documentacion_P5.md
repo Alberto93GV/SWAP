@@ -117,7 +117,7 @@ Para finalizar con el maestro vamos a consultar los datos de la BD que posterior
 Nos iriamos pues al esclavo, entrariamos en MySQL, le facilitariamos los datos del maestro y arrancariamos el esclavo:
 
 
-![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/configuracion_esclavo_final.png)
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/configuracion_final_esclavo.png)
 
 
 
