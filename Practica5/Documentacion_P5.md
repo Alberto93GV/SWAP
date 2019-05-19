@@ -119,6 +119,19 @@ Nos iriamos pues al esclavo, entrariamos en MySQL, le facilitariamos los datos d
 
 ![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/configuracion_final_esclavo.png)
 
+Volvemos al maestro para desbloquear las tablas para que puedan meterse nuevos datos con la siguiente orden:
+
+	mysql> UNLOCK TABLES;
+
+Para comprobar que la replicacion funciona correctamente vamos a introducir el siguiente registro en m1 e iremos a m2 para ver si este se ha copiado correctamente:
+
+	mysql> use contactos;
+	mysql> insert into datos(nombre,tlf) values ("Prueba",666555444);
+
+Desde m2 consultamos la tabla y vemos que efectivamente dicho registro ha sido replicado como se muestra en la siguiente captura:
+
+![imagen](https://github.com/Alberto93GV/SWAP/blob/master/Practica5/comprobacion_replicacion.png)
+
 
 
 
